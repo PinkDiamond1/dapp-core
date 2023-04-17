@@ -41,6 +41,7 @@
     "@commitlint/config-conventional": "^17.6.1",
     "@testing-library/react-hooks": "^8.0.1",
     "@types/jest": "^29.5.0",
+    "@types/lodash": "^4.14.194",
     "@types/react": "^18.0.35",
     "@types/react-dom": "^18.0.11",
     "@typescript-eslint/eslint-plugin": "^5.58.0",
@@ -83,6 +84,7 @@
     "npm"
   ],
   "dependencies": {
+    "lodash": "^4.17.21",
     "prop-types": "^15.8.1"
   },
   "lint-staged": {
