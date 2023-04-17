@@ -1,2 +1,3 @@
-export { useCounter } from './hooks/useCounter/';
-export * from './components';
+export * from '@/constants';
+export * from '@/hooks';
+export * from '@/utils';

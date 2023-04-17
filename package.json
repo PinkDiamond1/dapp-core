@@ -13,7 +13,10 @@
   "scripts": {
     "build": "rollup -c --bundleConfigAsCjs",
     "start": "rollup -c -w --bundleConfigAsCjs",
-    "test": "jest"
+    "lint:js": "eslint --fix 'src/**/*.{js,jsx,ts,tsx}'",
+    "lint:css": "stylelint --fix 'src/**/*.{scss,css}'",
+    "lint:json": "prettier --write \"./**/*.json\"",
+    "prepare": "husky install"
   },
   "jest": {
     "transform": {
@@ -34,14 +37,25 @@
     "react-dom": ">= 16.8.0"
   },
   "devDependencies": {
+    "@commitlint/cli": "^17.6.1",
+    "@commitlint/config-conventional": "^17.6.1",
     "@testing-library/react-hooks": "^8.0.1",
     "@types/jest": "^29.5.0",
     "@types/react": "^18.0.35",
     "@types/react-dom": "^18.0.11",
+    "@typescript-eslint/eslint-plugin": "^5.58.0",
+    "@typescript-eslint/parser": "^5.58.0",
     "babel-core": "^6.26.3",
     "babel-runtime": "^6.26.0",
+    "eslint": "^8.38.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
+    "husky": "^8.0.3",
     "jest": "^29.5.0",
+    "lint-staged": "^13.2.1",
+    "prettier": "^2.8.7",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-test-renderer": "^18.2.0",
@@ -49,6 +63,13 @@
     "rollup-plugin-sass": "^1.12.19",
     "rollup-plugin-typescript2": "^0.34.1",
     "rollup-plugin-uglify": "^6.0.4",
+    "stylelint": "^15.5.0",
+    "stylelint-a11y": "^1.2.3",
+    "stylelint-checkstyle-formatter": "^0.1.2",
+    "stylelint-config-prettier": "^9.0.5",
+    "stylelint-config-standard": "^33.0.0",
+    "stylelint-config-styled-components": "^0.1.1",
+    "stylelint-processor-styled-components": "^1.10.0",
     "ts-jest": "^29.1.0",
     "typescript": "^5.0.4"
   },
@@ -63,5 +84,16 @@
   ],
   "dependencies": {
     "prop-types": "^15.8.1"
+  },
+  "lint-staged": {
+    "*.{ts,tsx,js,jsx}": [
+      "yarn lint:js"
+    ],
+    "*.{css,scss}": [
+      "yarn lint:css"
+    ],
+    "*.json": [
+      "yarn lint:json"
+    ]
   }
 }
