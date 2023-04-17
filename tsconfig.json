@@ -7,8 +7,9 @@
     "sourceMap": true,
     "allowJs": false,
     "jsx": "react",
-    "declaration": true,
     "moduleResolution": "node",
+    "declaration": true,
+    "declarationDir": "dist",
     "forceConsistentCasingInFileNames": true,
     "noImplicitReturns": true,
     "noImplicitThis": true,
@@ -23,6 +24,6 @@
       "@/*": ["src/*"]
     }
   },
-  "include": ["src", "declaration.d.ts"],
-  "exclude": ["node_modules", "dist", "rollup.config.mjs"]
+  "include": ["src/**/*", "declaration.d.ts"],
+  "exclude": ["node_modules", "dist", "rollup.config.js"]
 }

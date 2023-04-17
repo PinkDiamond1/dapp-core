@@ -12,7 +12,7 @@ interface CheckMobile {
   desktopScreen: boolean;
 }
 
-function useWindowSize(): Size & CheckMobile {
+export function useWindowSize(): Size & CheckMobile {
   const [windowSize, setWindowSize] = useState<Size>({
     sreenWidth: 0,
     heightWidth: 0,
@@ -59,5 +59,3 @@ function useWindowSize(): Size & CheckMobile {
     desktopScreen,
   };
 }
-
-export default useWindowSize;
