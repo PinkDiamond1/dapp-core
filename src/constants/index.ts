@@ -1,3 +1,3 @@
-export * from '@/constants/breakpoint';
-export * from '@/constants/storage';
-export * from '@/constants/error';
+export * from './breakpoint';
+export * from './storage';
+export * from './error';

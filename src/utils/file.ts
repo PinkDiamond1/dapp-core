@@ -1,3 +1,5 @@
+import { Buffer } from "buffer";
+
 export const readFileAsBuffer = (file: File | Blob): Promise<Buffer> => {
   return new Promise((resolve, reject) => {
     const reader = new FileReader();

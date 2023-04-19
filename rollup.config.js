@@ -29,7 +29,6 @@ export default {
       preferBuiltins: true,
       browser: true,
     }),
-
     sass({ insert: true }),
     external(),
     commonjs(),
@@ -44,8 +43,4 @@ export default {
     }),
     json(),
   ],
-  external: [
-    'events'
-  ],
-  context: 'window',
 };
