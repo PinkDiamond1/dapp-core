@@ -1,4 +1,4 @@
-import { MOBILE_SCREEN, TABLET_SCREEN } from '@/constants/breakpoint';
+import { MOBILE_SCREEN, TABLET_SCREEN } from '../../constants/breakpoint';
 import { useEffect, useState } from 'react';
 
 interface Size {

@@ -1,5 +1,5 @@
 import React, { PropsWithChildren } from 'react';
-import { useIsMounted } from '@/hooks/useIsMounted';
+import { useIsMounted } from '../../hooks/useIsMounted';
 
 const ClientOnly: React.FC<PropsWithChildren> = (
   props: PropsWithChildren,

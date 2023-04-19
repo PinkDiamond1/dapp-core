@@ -19,10 +19,7 @@
     "noUnusedParameters": true,
     "esModuleInterop": true,
     "strict": true,
-    "baseUrl": "./",
-    "paths": {
-      "@/*": ["src/*"]
-    }
+    "baseUrl": "./"
   },
   "include": ["src/**/*", "declaration.d.ts"],
   "exclude": ["node_modules", "dist", "rollup.config.js"]
