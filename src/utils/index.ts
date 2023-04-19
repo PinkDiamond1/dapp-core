@@ -2,8 +2,6 @@ export * from '@/utils/address';
 export * from '@/utils/auth-storage';
 export * from '@/utils/bitcoin-storage';
 export * from '@/utils/common';
-export * from '@/utils/contract';
-export * from '@/utils/derive-key';
 export * from '@/utils/dimensions';
 export * from '@/utils/file';
 export * from '@/utils/format';

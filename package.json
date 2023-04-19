@@ -94,22 +94,12 @@
     "npm"
   ],
   "dependencies": {
-    "@bitcoinerlab/secp256k1": "^1.0.2",
     "@ethersproject/address": "^5.7.0",
-    "@ethersproject/bytes": "^5.7.0",
-    "@ethersproject/constants": "^5.7.0",
-    "@ethersproject/contracts": "^5.7.0",
-    "@ethersproject/keccak256": "^5.7.0",
-    "@ethersproject/providers": "^5.7.2",
-    "@ethersproject/units": "^5.7.0",
     "bignumber.js": "^9.1.1",
-    "bip32": "^4.0.0",
     "bitcoin-address-validation": "^2.2.1",
-    "bitcoinjs-lib": "^6.1.0",
     "buffer": "^6.0.3",
     "lodash": "^4.17.21",
-    "prop-types": "^15.8.1",
-    "web3": "^1.9.0"
+    "prop-types": "^15.8.1"
   },
   "resolutions": {
     "cipher-base": "https://github.com/TrustlessComputer/patched-cipher-base.git"

@@ -1,4 +1,3 @@
-import Web3 from 'web3';
 import BigNumber from 'bignumber.js';
 
 export const exponentialToDecimal = (exponential: number): string => {
@@ -66,13 +65,6 @@ export const formatPrice = (price: number | string, emptyStr?: string): string =
   if (!price) return emptyStr || '-';
   const priceNumb = new BigNumber(price).toNumber();
   return ceilPrecised(priceNumb, 4).toString().replace(',', '.');
-};
-
-export const formatEthPrice = (price: string | number | null, emptyStr?: string, precision = 4): string => {
-  if (!price) return emptyStr || '-';
-  return ceilPrecised(parseFloat(Web3.utils.fromWei(`${price}`, 'ether')), precision)
-    .toString()
-    .replace(',', '.');
 };
 
 export const formatEthPriceInput = (price: string | null, emptyStr?: string): string => {
