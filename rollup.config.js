@@ -17,7 +17,6 @@ export default {
       file: packageJson.main,
       format: 'cjs',
       sourcemap: true,
-      name: 'react-lib',
     },
     {
       file: packageJson.module,
@@ -26,16 +25,16 @@ export default {
     },
   ],
   plugins: [
-    sass({ insert: true }),
-    external(),
     resolve({
       preferBuiltins: true,
-      mainFields: ['browser'],
+      browser: true,
     }),
+
+    sass({ insert: true }),
+    external(),
     commonjs(),
     peerDepsExternal(),
     replace({
-      __IS_DEV__: process.env.NODE_ENV === 'development',
       preventAssignment: true,
     }),
     terser(),
@@ -45,4 +44,8 @@ export default {
     }),
     json(),
   ],
+  external: [
+    'events'
+  ],
+  context: 'window',
 };
