@@ -6,6 +6,7 @@ import external from 'rollup-plugin-peer-deps-external';
 import sass from 'rollup-plugin-sass';
 import peerDepsExternal from 'rollup-plugin-peer-deps-external';
 import replace from '@rollup/plugin-replace';
+import json from "@rollup/plugin-json";
 
 const packageJson = require('./package.json');
 
@@ -27,17 +28,21 @@ export default {
   plugins: [
     sass({ insert: true }),
     external(),
-    resolve(),
+    resolve({
+      preferBuiltins: true,
+      mainFields: ['browser'],
+    }),
     commonjs(),
     peerDepsExternal(),
     replace({
       __IS_DEV__: process.env.NODE_ENV === 'development',
       preventAssignment: true,
     }),
+    terser(),
     typescript({
       tsconfig: './tsconfig.json',
       useTsconfigDeclarationDir: true,
     }),
-    terser(),
+    json(),
   ],
 };

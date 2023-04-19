@@ -9,3 +9,4 @@ yarn.lock
 **/*.scss
 **/*.snap
 **/*.md
+rollup.config.js
